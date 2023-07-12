@@ -9,6 +9,5 @@ require'toggleterm'.setup({
     start_in_insert = true,
     -- 在下方打开终端
     direction = 'float', -- 'vertical' | 'horizontal' | 'tab' | 'float'
-    dir = '.',
 })
 

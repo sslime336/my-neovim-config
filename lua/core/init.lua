@@ -25,3 +25,7 @@ vim.opt.softtabstop = 4 -- 会影响 vim 在插入模式下按 Tab
                         -- tab 会插入 4 个空格
 vim.opt.expandtab = true -- 将 tabs 换成 spaces
 
+-- Windows 下面 Neovim terminal bug 的 workaround
+vim.cmd [[let &shell = '"D:/Git/bin/bash.exe"']]
+vim.cmd [[let &shellcmdflag = '-s']]
+
