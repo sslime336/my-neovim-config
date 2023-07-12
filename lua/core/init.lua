@@ -1,8 +1,8 @@
 -- 使用系统剪切板
 vim.opt.clipboard = 'unnamedplus'
 
--- 是否启用鼠标(e.g. 可以用鼠标改变光标的位置) 这里是不启用
-vim.opt.mouse = ''
+-- 是否启用鼠标，不启用可以设置为空字符串: ''
+vim.opt.mouse = 'a'
 
 -- <leader>
 vim.g.mapleader = ','
@@ -13,7 +13,15 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- 这个会高亮当前行(在原版状态下当前行会有一个下划线)
--- vim.opt.cursorline = true
+vim.opt.cursorline = true
 
--- 将 tabs 换成 spaces
-vim.opt.expandtab = true
+-- tab 相关配置
+vim.opt.shiftwidth = 4 -- 按下 tab 4 格宽
+vim.opt.tabstop = 4 -- 一个 tab 会被显示成 4 个空格
+vim.opt.softtabstop = 4 -- 会影响 vim 在插入模式下按 Tab
+                        -- 键所实际得到的字符，可能是插入特定数目的空格，也可能是插入一个
+                        -- tab 字符。 具体使用时，会受到 tabstop 选项和
+                        -- expandtab 选项的影响vim.opt.shiftwidth = 4 -- 每个
+                        -- tab 会插入 4 个空格
+vim.opt.expandtab = true -- 将 tabs 换成 spaces
+

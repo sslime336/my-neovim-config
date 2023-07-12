@@ -27,10 +27,40 @@ return require('packer').startup({
 
     -- 需要安装的插件，因为现在在用 github 来下载插件，所以这些需要能在 github 上面找到
     use 'nvim-tree/nvim-tree.lua'
+    -- 不同类型文件的 icons
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
-    -- 主题 lake
-    use 'antonk52/lake.nvim'
+    use 'antonk52/lake.nvim' -- 主题 lake
+    use 'nvim-treesitter/nvim-treesitter'
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = {{
+        'nvim-lua/plenary.nvim'
+      }}
+    }
+    -- bufferline 把 buffer 显示成类似 VSCode 中 Tab 页的形式
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "*",
+        requires = 'nvim-tree/nvim-web-devicons'
+    }
+    -- 方便的终端
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
+    -- 显示 git 的修改和 blame
+    use 'lewis6991/gitsigns.nvim'
+    -- 显示文件不同
+    use 'sindrets/diffview.nvim'
+    -- Neovim 版 easymotion
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            -- you can configure hop the way you like here; see :h hop-config
+            require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
