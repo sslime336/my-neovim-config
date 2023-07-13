@@ -19,7 +19,7 @@ vim.opt.cursorline = true
 vim.opt.shiftwidth = 4   -- 按下 tab 4 格宽
 vim.opt.tabstop = 4      -- 一个 tab 会被显示成 4 个空格
 vim.opt.softtabstop = 4
- vim.opt.shiftwidth = 4  -- 每个 tab 会插入 4 个空格
+vim.opt.shiftwidth = 4  -- 每个 tab 会插入 4 个空格
 vim.opt.expandtab = true -- 将 tabs 换成 spaces
 
 -- Windows 下面 Neovim terminal bug 的 workaround
@@ -28,4 +28,7 @@ vim.cmd [[let &shellcmdflag = '-s']]
 
 -- 不生成备份文件，如 *.swp
 vim.cmd 'set nobackup'
+
+-- 关闭搜索高亮
+vim.cmd 'set nohlsearch'
 

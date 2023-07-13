@@ -1,3 +1,8 @@
--- 保存当前文件并使能
-vim.keymap.set('n', '<C-s>', ':w<CR>:source %<CR>')
+-- 保存当前文件
+vim.keymap.set('n', '<C-s>', ':w<CR>')
+
+-- 插入模式下 Ctrl-v 能粘贴
+vim.keymap.set('i', '<C-v>', '<Esc>pi')
+-- 命令模式下 Ctrl-v 能粘贴
+vim.keymap.set('c', '<C-v>', '<C-r>"')
 

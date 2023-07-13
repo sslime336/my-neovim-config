@@ -9,3 +9,10 @@ vim.keymap.set('n', '<space>b', builtin.buffers, {})
 -- 打开插件帮助
 vim.keymap.set('n', '<space>h', builtin.help_tags, {})
 
+-- telescope 拓展
+-- require('telescope').load_extension('projects')
+
+-- projects
+-- require 'plugins/project'
+-- vim.keymap.set('n', '<space>p', recent_projects)
+

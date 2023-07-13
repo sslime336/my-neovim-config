@@ -19,7 +19,7 @@ local ensure_packer = function()
   return false
 end
 
-local packer_bootstrap = ensure_packer()
+local PACKER_BOOTSTRAPED = ensure_packer()
 
 return require('packer').startup({
   function(use)
@@ -42,12 +42,15 @@ return require('packer').startup({
     use {
         'akinsho/bufferline.nvim',
         tag = "*",
-        requires = 'nvim-tree/nvim-web-devicons'
     }
     -- 方便的终端
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-    end}
+    use {
+        "akinsho/toggleterm.nvim",
+        tag = '*',
+        config = function()
+            require("toggleterm").setup()
+        end
+    }
     -- 显示 git 的修改和 blame
     use 'lewis6991/gitsigns.nvim'
     -- 显示文件不同
@@ -61,10 +64,58 @@ return require('packer').startup({
             require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
         end
     }
+    -- 补全括号
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    -- 项目管理
+    use {
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup { --[[ 留空使用默认配置 ]] }
+        end
+    }
+    -- 自动格式化
+    use 'mhartington/formatter.nvim' 
+    -- Dashboard
+    -- 这个需要花时间配置
+
+    -- 语言无关注释
+    use 'numToStr/Comment.nvim'
+    -- 各种场景的自动补全
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lsp' 
+    -- vsnip
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
+    use 'rafamadriz/friendly-snippets'
+    -- lspkind 提供 VSCode 样式的代码补全 ui(函数，接口等的 ui)
+    use 'onsails/lspkind-nvim'
+    -- lsp 支持
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
-    if packer_bootstrap then
+    if PACKER_BOOTSTRAPED then
       require('packer').sync()
     end
   end,
@@ -89,3 +140,4 @@ return require('packer').startup({
       },
   }
 })
+
