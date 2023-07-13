@@ -6,4 +6,3 @@ require 'core'
 require 'core.keymaps'
 -- 插件
 require 'plugins'
-
