@@ -14,3 +14,11 @@ OS: Windows10
 
 - Nerd Font 字体一部分 icon 缺失
 
+## TODO
+
+- debug support
+- ssh
+- bookmarks
+- tabnine
+- translation
+
