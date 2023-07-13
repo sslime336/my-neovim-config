@@ -10,9 +10,8 @@ vim.keymap.set('n', '<space>b', builtin.buffers, {})
 vim.keymap.set('n', '<space>h', builtin.help_tags, {})
 
 -- telescope 拓展
--- require('telescope').load_extension('projects')
+require('telescope').load_extension('projects')
 
 -- projects
--- require 'plugins/project'
--- vim.keymap.set('n', '<space>p', recent_projects)
-
+local recent_projects = [[:lua require 'telescope'.extensions.projects.projects {}<CR>]]
+vim.keymap.set('n', '<space>p', recent_projects)

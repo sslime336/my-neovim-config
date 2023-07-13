@@ -39,13 +39,14 @@ load_batch {
     'bufferline',
     -- 内嵌终端
     'toggleterm',
-    -- 项目管理(与 telescope 集成，作为 telescope 的拓展使用)
-    -- 'project',
     -- 语言无关注释
     'comment',
     -- 自动补全
     'nvim-cmp',
     -- 'lsp'
     'mason',
+    -- 安装了但没写出:
+    -- Dashboard, project
+    -- rust-tools
+    'rust-tools'
 }
-

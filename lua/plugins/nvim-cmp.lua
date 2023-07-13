@@ -10,18 +10,18 @@ cmp.setup {
     formatting = {
         format = lspkind.cmp_format {
             -- show only symbol annotations
-            -- mode = 'symbol', 
+            -- mode = 'symbol',
             -- prevent the popup from showing more than provided characters
             -- (e.g 50 will not show more than 50 characters)
-            maxwidth = 50, 
+            maxwidth = 50,
             -- when popup menu exceed maxwidth, the truncated part would show
             -- ellipsis_char instead (must define maxwidth first)
-            ellipsis_char = '...', 
+            ellipsis_char = '...',
 
             -- The function below will be called before any actual modifications
             -- from lspkind so that you can provide more controls on popup
             -- customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-            before = function (entry, vim_item) 
+            before = function(entry, vim_item)
                 return vim_item
             end
         }
@@ -46,7 +46,7 @@ cmp.setup {
     },
     mapping = {
         -- { 'i', 'c' } 表示可在 INSERT 和 COMMAND 模式使用
-        ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }), 
+        ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
         ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -54,7 +54,7 @@ cmp.setup {
         ['<C-e>'] = cmp.mapping.abort(),
         -- Accept currently selected item. Set `select` to `false` to only
         -- confirm explicitly selected items.
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), 
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<Tab>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = {
@@ -70,7 +70,7 @@ cmp.setup.filetype('gitcommit', {
     sources = {
         -- You can specify the `git` source if [you were installed
         -- it](https://github.com/petertriho/cmp-git).
-        { name = 'git' }, 
+        { name = 'git' },
         { name = 'buffer' },
     }
 })
@@ -99,4 +99,3 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- require('lspconfig')['cmp_nvim_lsp'].setup {
 --     capabilities = capabilities
 -- }
-

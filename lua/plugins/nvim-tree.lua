@@ -3,6 +3,12 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require('nvim-tree').setup {
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+    update_focused_file = {
+        enable = true,
+        update_root = true
+    },
     on_attach = function(bufnr)
         local api = require "nvim-tree.api"
 
@@ -21,11 +27,10 @@ require('nvim-tree').setup {
 
         -- custom mappings
         -- 返回上级目录
-        vim.keymap.set('n', '<C-[>', api.tree.change_root_to_parent,        opts('Up'))
-        vim.keymap.set('n', '?',     api.tree.toggle_help,                  opts('Help'))
+        vim.keymap.set('n', '<C-[>', api.tree.change_root_to_parent, opts('Up'))
+        vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
     end
 }
 
 -- 从 VSCode 迁移过来的习惯，Ctrl-b 打开文件列表
 vim.keymap.set('n', '<C-b>', ':NvimTreeFindFileToggle<CR>')
-

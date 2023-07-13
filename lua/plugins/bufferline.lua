@@ -5,13 +5,13 @@ require("bufferline").setup {
         -- 使用 nvim 内置lsp
         diagnostics = "nvim_lsp",
         -- 左侧让出 nvim-tree 的位置
-        offsets = {{
+        offsets = { {
             filetype = "NvimTree",
             text = "[File Explorer]",
             highlight = "Directory",
             text_align = "left"
-        }},
-        
+        } },
+
     }
 }
 
@@ -21,6 +21,6 @@ vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>")
 local cmds =
     ':bdelete %<CR>' ..
     ':NvimTreeFindFileToggle<CR>' ..
-    ':NvimTreeFindFileToggle<CR>'
+    ':NvimTreeFindFileToggle<CR>' ..
+    '<C-w><C-w>'
 vim.keymap.set('n', '.', cmds)
-
