@@ -13,7 +13,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- 这个会高亮当前行(在原版状态下当前行会有一个下划线)
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- tab 相关配置
 vim.opt.shiftwidth = 4   -- 按下 tab 4 格宽
@@ -35,5 +35,3 @@ vim.cmd 'set nohlsearch'
 -- 设置默认文件保存位置
 local default_path = 'E:/nvim-temp'
 vim.cmd('cd ' .. default_path)
--- 输出一下当前所在位置
-vim.cmd(':echo ' .. '"New files will be saved at ' .. default_path .. ', current dir: ' .. default_path .. '"')

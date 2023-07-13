@@ -45,8 +45,6 @@ load_batch {
     'nvim-cmp',
     -- 'lsp'
     'mason',
-    -- 安装了但没写出:
-    -- Dashboard, project
     -- rust-tools
-    'rust-tools'
+    'rust-tools',
 }
