@@ -26,14 +26,9 @@ OS: Windows10
     - `<C-j>` 下一个选项
     - `<C-k>` 上一个选项
     - `<Tab>`/<CR> 确定
+- 还有的懒得写了...
 
 ## 已知问题
 
 - Nerd Font 字体一部分 icon 缺失
-
-
-## TODO:
-
-    - formatter
-
 
