@@ -19,7 +19,7 @@ vim.opt.cursorline = true
 vim.opt.shiftwidth = 4   -- 按下 tab 4 格宽
 vim.opt.tabstop = 4      -- 一个 tab 会被显示成 4 个空格
 vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4  -- 每个 tab 会插入 4 个空格
+vim.opt.shiftwidth = 4   -- 每个 tab 会插入 4 个空格
 vim.opt.expandtab = true -- 将 tabs 换成 spaces
 
 -- Windows 下面 Neovim terminal bug 的 workaround
@@ -32,3 +32,8 @@ vim.cmd 'set nobackup'
 -- 关闭搜索高亮
 vim.cmd 'set nohlsearch'
 
+-- 设置默认文件保存位置
+local default_path = 'E:/nvim-temp'
+vim.cmd('cd ' .. default_path)
+-- 输出一下当前所在位置
+vim.cmd(':echo ' .. '"New files will be saved at ' .. default_path .. ', current dir: ' .. default_path .. '"')
