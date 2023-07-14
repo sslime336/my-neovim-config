@@ -8,7 +8,6 @@ require("mason-lspconfig").setup {
 
 -- 使用 lsp 格式化
 require("lsp-format").setup {
-    rust_analyzer = {}
 }
 
 local function on_attach(client)

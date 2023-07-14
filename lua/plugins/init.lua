@@ -8,7 +8,7 @@
 ]]
 
 
-local plugin_path_prefix = 'plugins.'
+local plugin_path_prefix = 'config.'
 local function load(plugin_name)
     require(plugin_path_prefix .. plugin_name)
 end
@@ -25,8 +25,6 @@ load_batch {
     'lualine',
     -- 树状文件列表，这里用的是 github 上面同步的镜像，官方库一直下载失败
     'nvim-tree',
-    -- 主题的 wrapper，具体是什么主题需要看 ./theme/init.lua
-    'theme',
     -- 提供基于文件名和文本内容的搜索
     'telescope',
     -- 代码高亮，具体高亮那种代码需要自己配置(这名字取得挺误导的>w<)

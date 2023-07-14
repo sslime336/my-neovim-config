@@ -35,3 +35,7 @@ vim.cmd 'set nohlsearch'
 -- 设置默认文件保存位置
 local default_path = 'E:/nvim-temp'
 vim.cmd('cd ' .. default_path)
+
+-- Theme
+vim.cmd 'color lake'
+

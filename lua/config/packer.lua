@@ -102,9 +102,6 @@ return require('packer').startup({
         }
 
 
-
-
-
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if PACKER_BOOTSTRAPED then
