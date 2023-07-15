@@ -29,8 +29,13 @@ return require('packer').startup({
         use 'nvim-tree/nvim-tree.lua'
         -- 不同类型文件的 icons
         use 'nvim-tree/nvim-web-devicons'
-        use 'nvim-lualine/lualine.nvim'
-        use 'antonk52/lake.nvim' -- 主题 lake
+        -- Theme
+        use "folke/tokyonight.nvim"
+        -- 类似 Powerline
+        use {
+            'nvim-lualine/lualine.nvim',
+            theme = 'tokyonight', -- 配合 tokyonight 一起使用
+        }
         use 'nvim-treesitter/nvim-treesitter'
         use {
             'nvim-telescope/telescope.nvim',
@@ -100,6 +105,18 @@ return require('packer').startup({
                 require("project_nvim").setup {}
             end
         }
+        -- VSCode 一样的模块范围显示与跳转，e.g. mod -> fn (在某某模块中的某个函数)
+        use({
+            "utilyre/barbecue.nvim",
+            tag = "*",
+            theme = "tokyonight", -- 使用 tokyonight theme(主要是这个主题更新很勤快x)
+            requires = {
+                "SmiteshP/nvim-navic",
+            },
+            config = function()
+                require("barbecue").setup()
+            end,
+        })
 
 
         -- Automatically set up your configuration after cloning packer.nvim
