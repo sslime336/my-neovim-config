@@ -58,6 +58,7 @@ cmp.setup {
         ['<Tab>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = {
+        { name = 'cmp_tabnine' },
         { name = 'nvim_lsp' },
         { name = 'vsnip' }, -- For vsnip users.
         { name = 'buffer' },

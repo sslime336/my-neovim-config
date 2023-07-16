@@ -27,6 +27,12 @@ return require('packer').startup({
 
         -- 需要安装的插件，因为现在在用 github 来下载插件，所以这些需要能在 github 上面找到
         use 'nvim-tree/nvim-tree.lua'
+        -- tabnine AI 辅助
+        use {
+            'tzachar/cmp-tabnine',
+            after = "nvim-cmp",
+            run = 'powershell ./install.ps1' -- on Windows
+        }
         -- 不同类型文件的 icons
         use 'nvim-tree/nvim-web-devicons'
         -- Theme

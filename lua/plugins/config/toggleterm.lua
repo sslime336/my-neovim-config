@@ -7,8 +7,8 @@ require 'toggleterm'.setup {
     open_mapping = '<C-\\>',
     -- 进入终端自动进入 INSERT 模式
     start_in_insert = true,
-    -- 在下方打开终端
-    direction = 'horizontal', -- 'vertical' | 'horizontal' | 'tab' | 'float'
+    -- 打开终端的位置
+    direction = 'float', -- 'vertical' | 'horizontal' | 'tab' | 'float'
 }
 
 -- 在弹出的终端中也能使用 vim 下的快捷键，但只能在 INSERT 模式下编辑，

@@ -15,5 +15,8 @@ OS: Windows10
 - debug support
 - ssh
 - bookmarks
-- tabnine
 - translation
+
+## 可能的问题与解决
+
+插件不生效，可能不止一处需要 `source`
