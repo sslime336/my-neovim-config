@@ -7,7 +7,7 @@ require("bufferline").setup {
         -- 左侧让出 nvim-tree 的位置
         offsets = { {
             filetype = "NvimTree",
-            text = "[File Explorer]",
+            text = "Zako❤zako~",
             highlight = "Directory",
             text_align = "left"
         } },

@@ -7,8 +7,7 @@
     但为了标记已安装的插件，所以仍然写了一些注释来标注
 ]]
 
-
-local plugin_path_prefix = 'config.'
+local plugin_path_prefix = 'plugins.config.'
 local function load(plugin_name)
     require(plugin_path_prefix .. plugin_name)
 end
@@ -18,9 +17,10 @@ local function load_batch(plugin_list)
     end
 end
 
+-- 插件包管理器
+require 'plugins.packer'
+
 load_batch {
-    -- 插件包管理器
-    'packer',
     -- 类似与 Powerline，Neovim 的状态栏插件
     'lualine',
     -- 树状文件列表，这里用的是 github 上面同步的镜像，官方库一直下载失败

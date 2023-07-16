@@ -37,5 +37,5 @@ local default_path = 'E:/nvim-temp'
 vim.cmd('cd ' .. default_path)
 
 -- Theme
--- vim.cmd 'color lake'
+-- vim.cmd 'color tokyonight'
 vim.cmd [[colorscheme tokyonight]] -- 这个主题更新很勤快，其他插件支持也不错，star 好像也是最多的

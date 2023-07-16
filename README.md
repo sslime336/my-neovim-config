@@ -17,4 +17,3 @@ OS: Windows10
 - bookmarks
 - tabnine
 - translation
-

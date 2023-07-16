@@ -37,12 +37,9 @@ return require('packer').startup({
             theme = 'tokyonight', -- 配合 tokyonight 一起使用
         }
         use 'nvim-treesitter/nvim-treesitter'
-        use {
-            'nvim-telescope/telescope.nvim',
-            requires = { {
-                'nvim-lua/plenary.nvim'
-            } }
-        }
+        -- 通用工具包，有不少的库都依赖于这个
+        use "nvim-lua/plenary.nvim"
+        use 'nvim-telescope/telescope.nvim'
         -- bufferline 把 buffer 显示成类似 VSCode 中 Tab 页的形式
         use {
             'akinsho/bufferline.nvim',
@@ -52,23 +49,17 @@ return require('packer').startup({
         use {
             "akinsho/toggleterm.nvim",
             tag = '*',
-            config = function()
-                require("toggleterm").setup()
-            end
         }
         -- 显示 git 的修改和 blame
         use 'lewis6991/gitsigns.nvim'
         -- 显示文件不同
         use 'sindrets/diffview.nvim'
         -- Neovim 版 easymotion
-        use {
-            'phaazon/hop.nvim',
-            branch = 'v2', -- optional but strongly recommended
-            config = function()
-                -- you can configure hop the way you like here; see :h hop-config
-                require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-            end
-        }
+        -- use 'phaazon/hop.nvim' -- maintainer 正在找维护者，空行报错 bug 还未修复所以先用 fork
+        use 'sslime336/hop.nvim'
+        -- outline
+        use 'simrat39/symbols-outline.nvim'
+
         -- 补全括号
         use {
             "windwp/nvim-autopairs",
@@ -94,8 +85,6 @@ return require('packer').startup({
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
             "neovim/nvim-lspconfig",
-            -- 使用 lsp 格式化
-            "lukas-reineke/lsp-format.nvim"
         }
         -- For using rust-analyzer tools
         use 'simrat39/rust-tools.nvim'
@@ -105,8 +94,15 @@ return require('packer').startup({
                 require("project_nvim").setup {}
             end
         }
+        -- 自动保存
+        use {
+            "Pocco81/auto-save.nvim",
+            config = function()
+                require("auto-save").setup {}
+            end,
+        }
         -- VSCode 一样的模块范围显示与跳转，e.g. mod -> fn (在某某模块中的某个函数)
-        use({
+        use {
             "utilyre/barbecue.nvim",
             tag = "*",
             theme = "tokyonight", -- 使用 tokyonight theme(主要是这个主题更新很勤快x)
@@ -116,7 +112,8 @@ return require('packer').startup({
             config = function()
                 require("barbecue").setup()
             end,
-        })
+        }
+
 
 
         -- Automatically set up your configuration after cloning packer.nvim
