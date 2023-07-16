@@ -15,6 +15,7 @@ OS: Windows10
 - debug support
 - ssh
 - bookmarks
+- tabnine(not work yet)
 - translation
 
 ## 可能的问题与解决

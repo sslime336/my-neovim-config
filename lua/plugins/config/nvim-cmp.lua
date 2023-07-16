@@ -6,25 +6,35 @@ local cmp = require('cmp')
 -- 使用 VSCode 的标识符 ui
 local lspkind = require('lspkind')
 
+local source_mapping = {
+    buffer = "[Buffer]",
+    nvim_lsp = "[LSP]",
+    cmp_tabnine = "[TabNine]",
+    path = "[Path]",
+}
+
 cmp.setup {
     formatting = {
-        format = lspkind.cmp_format {
-            -- show only symbol annotations
-            -- mode = 'symbol',
-            -- prevent the popup from showing more than provided characters
-            -- (e.g 50 will not show more than 50 characters)
-            maxwidth = 50,
-            -- when popup menu exceed maxwidth, the truncated part would show
-            -- ellipsis_char instead (must define maxwidth first)
-            ellipsis_char = '...',
+        format = function(entry, vim_item)
+            -- if you have lspkind installed, you can use it like
+            -- in the following line:
+            vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = "symbol" })
+            vim_item.menu = source_mapping[entry.source.name]
+            if entry.source.name == "cmp_tabnine" then
+                local detail = (entry.completion_item.labelDetails or {}).detail
+                vim_item.kind = ""
+                if detail and detail:find('.*%%.*') then
+                    vim_item.kind = vim_item.kind .. ' ' .. detail
+                end
 
-            -- The function below will be called before any actual modifications
-            -- from lspkind so that you can provide more controls on popup
-            -- customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-            before = function(entry, vim_item)
-                return vim_item
+                if (entry.completion_item.data or {}).multiline then
+                    vim_item.kind = vim_item.kind .. ' ' .. '[ML]'
+                end
             end
-        }
+            local maxwidth = 80
+            vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
+            return vim_item
+        end,
     },
     experimental = {
         -- 是否在当前光标后面虚化显示可补全的内容
