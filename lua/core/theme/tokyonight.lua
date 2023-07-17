@@ -2,7 +2,7 @@
     tokyonight 主题配置
 ]]
 
-require("tokyonight").setup({
+require("tokyonight").setup {
     style = "night",        -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
     light_style = "day",    -- The theme is used when the background is set to light
     transparent = false,    -- Enable this to disable setting the background color
@@ -38,4 +38,7 @@ require("tokyonight").setup({
     ---@param highlights Highlights
     ---@param colors ColorScheme
     on_highlights = function(highlights, colors) end,
-})
+}
+-- 再次设置使能，因为 core.init 里面的命令会在这里的设置执行前先执行
+-- 当然也可以调整 init.lua 中的 require 顺序来处理(不想调整就先这样了)
+vim.cmd [[colorscheme tokyonight]]
