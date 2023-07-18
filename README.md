@@ -15,9 +15,13 @@ OS: Windows10
 - debug support
 - ssh
 - bookmarks
-- tabnine(not work yet)
 - translation
 
 ## 可能的问题与解决
 
 插件不生效，可能不止一处需要 `source`
+
+## 已知问题
+
+SymbolOutline 有 bug，无法正常打开
+
