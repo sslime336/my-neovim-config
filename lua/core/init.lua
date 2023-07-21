@@ -13,7 +13,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- 这个会高亮当前行(在原版状态下当前行会有一个下划线)
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- tab 相关配置
 vim.opt.shiftwidth = 4   -- 按下 tab 4 格宽

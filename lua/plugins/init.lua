@@ -45,4 +45,6 @@ load_batch {
     'mason',
     -- rust-tools
     'rust-tools',
+    -- 大纲 (SymbolsOutline)
+    'symbols-outline'
 }
