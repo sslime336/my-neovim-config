@@ -21,7 +21,3 @@ OS: Windows10
 
 插件不生效，可能不止一处需要 `source`
 
-## 已知问题
-
-SymbolOutline 有 bug，无法正常打开
-
