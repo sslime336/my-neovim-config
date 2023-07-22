@@ -2,12 +2,22 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+local opt = {
+    silent = true, noremap = true,
+}
+
 require('nvim-tree').setup {
+    renderer = {
+        group_empty = true,
+    },
+    filter = {
+        dotfiles = true,
+    },
     sync_root_with_cwd = true,
     respect_buf_cwd = true,
     update_focused_file = {
-        enable = true,
-        update_root = true
+        enable = false,
+        update_root = false
     },
     on_attach = function(bufnr)
         local api = require "nvim-tree.api"
@@ -33,4 +43,4 @@ require('nvim-tree').setup {
 }
 
 -- 从 VSCode 迁移过来的习惯，Ctrl-b 打开文件列表
-vim.keymap.set('n', '<C-b>', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<C-b>', ':NvimTreeFindFileToggle<CR>', opt)

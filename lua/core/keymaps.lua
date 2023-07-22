@@ -11,7 +11,7 @@ function format_code_lsp()
     vim.lsp.buf.format { async = true }
 end
 
--- 格式化、保存并使能当前文件
+-- 格式化、保存当前文件
 vim.keymap.set('n', '<C-s>', ':lua format_code_lsp()<CR>:w<CR>', opt)
 
 -- 插入模式下 Ctrl-v 能粘贴

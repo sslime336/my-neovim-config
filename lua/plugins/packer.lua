@@ -35,13 +35,8 @@ return require('packer').startup({
         }
         -- 不同类型文件的 icons
         use 'nvim-tree/nvim-web-devicons'
-        -- Theme
-        use "folke/tokyonight.nvim"
         -- 类似 Powerline
-        use {
-            'nvim-lualine/lualine.nvim',
-            theme = 'tokyonight', -- 配合 tokyonight 一起使用
-        }
+        use { 'nvim-lualine/lualine.nvim' }
         use 'nvim-treesitter/nvim-treesitter'
         -- 通用工具包，有不少的库都依赖于这个
         use "nvim-lua/plenary.nvim"
@@ -65,13 +60,11 @@ return require('packer').startup({
         use 'sslime336/hop.nvim'
         -- outline
         use 'simrat39/symbols-outline.nvim'
-
         -- 补全括号
         use {
             "windwp/nvim-autopairs",
             config = function() require("nvim-autopairs").setup {} end
         }
-
         -- 语言无关注释
         use 'numToStr/Comment.nvim'
         -- 各种场景的自动补全
@@ -107,20 +100,17 @@ return require('packer').startup({
                 require("auto-save").setup {}
             end,
         }
-        -- VSCode 一样的模块范围显示与跳转，e.g. mod -> fn (在某某模块中的某个函数)
+        -- 配合 LSP，美化 LSP 的提示等
         use {
-            "utilyre/barbecue.nvim",
-            tag = "*",
-            theme = "tokyonight", -- 使用 tokyonight theme(主要是这个主题更新很勤快x)
-            requires = {
-                "SmiteshP/nvim-navic",
-            },
+            "nvimdev/lspsaga.nvim",
+            after = 'nvim-lspconfig',
             config = function()
-                require("barbecue").setup()
+                require('lspsaga').setup {}
             end,
         }
-
-
+        -- Theme
+        use "folke/tokyonight.nvim"
+        use { "ellisonleao/gruvbox.nvim" }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins

@@ -46,5 +46,7 @@ load_batch {
     -- rust-tools
     'rust-tools',
     -- 大纲 (SymbolsOutline)
-    'symbols-outline'
+    'symbols-outline',
+    -- Lsp 美化
+    'lspsaga',
 }

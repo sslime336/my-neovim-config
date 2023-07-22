@@ -1,9 +1,7 @@
 require("mason").setup()
-require("mason").setup()
 require("mason-lspconfig").setup {
     ensure_installed = { "lua_ls", "rust_analyzer" },
 }
-
 
 local function on_attach(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
@@ -23,8 +21,8 @@ local function on_attach(client, bufnr)
     -- end, opt) vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opt)
     -- 重命名
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opt)
-    -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 
     -- lint(其实只是 format)
     vim.keymap.set('n', '<space>l', function() vim.lsp.buf.format { async = true } end, opt)

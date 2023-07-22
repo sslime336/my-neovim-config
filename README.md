@@ -17,7 +17,7 @@ OS: Windows10
 - bookmarks
 - translation
 
-## 可能的问题与解决
+## 使用手册
 
-插件不生效，可能不止一处需要 `source`
+TODO
 
