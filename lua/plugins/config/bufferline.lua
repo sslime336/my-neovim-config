@@ -9,12 +9,18 @@ require("bufferline").setup {
             {
                 filetype = "NvimTree",
                 text = "Directory",
-                highlight = "Directory",
-                text_align = "left"
+                text_align = "left",
+                separator = false,
             },
         },
+        separator_style = "slant", -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
+        hover = {
+            enabled = true,
+            delay = 200,
+            reveal = { 'close' }
+        }
 
-    }
+    },
 }
 
 local opt = {
