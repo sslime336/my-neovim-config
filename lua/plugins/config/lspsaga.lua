@@ -7,7 +7,7 @@ local opt = {
 -- 在悬浮窗查看定义
 vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opt)
 -- 跳转到定义
-vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>:set rnu<CR>:set nu<CR>", opt)
 -- 显示注释文档
 vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opt)
 -- 跳转到实现
