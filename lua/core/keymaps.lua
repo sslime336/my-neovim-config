@@ -6,6 +6,12 @@ local opt = {
     noremap = true,
     silent = true,
 }
+-- 在命令模式粘贴需要设置 silent 为 false 结果才能直接显示出来
+local opt_no_silent = {
+    noremap = true,
+    silent = false,
+}
+
 
 function format_code_lsp()
     vim.lsp.buf.format { async = true }
@@ -17,4 +23,4 @@ vim.keymap.set('n', '<C-s>', ':lua format_code_lsp()<CR>:w<CR>', opt)
 -- 插入模式下 Ctrl-v 能粘贴
 vim.keymap.set('i', '<C-v>', '<Esc>pa', opt)
 -- 命令模式下 Ctrl-v 能粘贴
-vim.keymap.set('c', '<C-v>', '<C-r>"', opt)
+vim.keymap.set('c', '<C-v>', '<C-r>"', opt_no_silent)
