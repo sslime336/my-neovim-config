@@ -134,8 +134,7 @@ return require('packer').startup({
         -- todo/fixme/issue 等高亮和跳转
         use { "folke/todo-comments.nvim" }
 
-
-        -- 函数作用域竖线提示
+        -- 函数作用域竖线提示(这个目前竖线位置有点不对)
         -- use {
         --     'lukas-reineke/indent-blankline.nvim',
         --     config = function()
