@@ -2,7 +2,6 @@
     Gruvbox 主题
 ]]
 
-
 require("gruvbox").setup {
     undercurl = true,
     underline = true,
