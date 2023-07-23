@@ -22,9 +22,14 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4   -- 每个 tab 会插入 4 个空格
 vim.opt.expandtab = true -- 将 tabs 换成 spaces
 
--- Windows 下面 Neovim terminal bug 的 workaround
-vim.cmd [[let &shell = '"D:/Git/bin/bash.exe"']]
-vim.cmd [[let &shellcmdflag = '-s']]
+local cur_os_path_separator = package.config:sub(1, 1)
+if cur_os_path_separator == '\\' then -- On windows
+    -- Windows 下面 Neovim terminal bug 的 workaround
+    vim.cmd [[let &shell = '"D:/Git/bin/bash.exe"']]
+    vim.cmd [[let &shellcmdflag = '-s']]
+elseif cur_os_path_separator == '/' then -- On Unix-like OS
+    vim.cmd [[let &shell = '/bin/bash']]
+end
 
 -- 不生成备份文件，如 *.swp
 vim.cmd 'set nobackup'

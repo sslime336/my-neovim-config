@@ -41,7 +41,7 @@ return require('packer').startup({
                 elseif cur_os_path_separator == '/' then
                     return on_unix
                 else
-                    return on_unix
+                    return defalut_install_script
                 end
             end
         }
@@ -128,16 +128,18 @@ return require('packer').startup({
         -- use { "folke/todo-comments.nvim" }
 
 
-        -- 报错高亮下划线(两个相关插件)
-        -- use 'folke/lsp-colors.nvim' -- 提供颜色
-        -- 报错诊断集成
-        -- use {
-        --     "folke/trouble.nvim",
-        --     config = function() require 'trouble'.setup {} end
-        -- }
-
         -- 函数作用域竖线提示
         -- use "lukas-reineke/indent-blankline.nvim"
+
+
+        -- 相同单词下划线标注
+        -- use {
+        --     'yamatsum/nvim-cursorline',
+        --     config = function()
+        --         require 'nvim-cursorline'.setup {}
+        --     end
+        -- }
+        --
 
 
 
