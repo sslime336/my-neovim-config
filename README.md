@@ -15,6 +15,7 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - debug support
 - ssh
 - translation
+- session
 
 ## 使用手册
 
