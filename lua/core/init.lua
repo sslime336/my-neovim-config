@@ -38,8 +38,13 @@ vim.cmd 'set nobackup'
 vim.cmd 'set nohlsearch'
 
 -- 设置默认文件保存位置
-local default_path = 'E:/nvim-temp'
-vim.cmd('cd ' .. default_path)
+local default_path_windows = 'E:/nvim-temp'
+local default_path_linux = '~/nvim-temp'
+if cur_os_path_separator == '\\' then    -- On windows
+    vim.cmd('cd ' .. default_path_windows)
+elseif cur_os_path_separator == '/' then -- On Unix-like OS
+    vim.cmd('cd ' .. default_path_linux)
+end
 
 -- Theme
 vim.opt.background = "dark"
