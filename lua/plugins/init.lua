@@ -49,4 +49,6 @@ load_batch {
     'symbols-outline',
     -- Lsp 美化
     'lspsaga',
+    -- todo/fixme/issue 等跳转
+    -- 'todo-comments',
 }

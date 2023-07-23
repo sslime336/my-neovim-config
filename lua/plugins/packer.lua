@@ -31,7 +31,19 @@ return require('packer').startup({
         use {
             'tzachar/cmp-tabnine',
             after = "nvim-cmp",
-            run = 'powershell ./install.ps1' -- on Windows
+            run = function()
+                local on_windows = 'powershell ./install.ps1' -- on Windows
+                local on_unix = './install.sh'                -- on Unix-like OS
+                local defalut_install_script = on_unix
+                local cur_os_path_separator = package.config:sub(1, 1)
+                if cur_os_path_separator == '\\' then
+                    return on_windows
+                elseif cur_os_path_separator == '/' then
+                    return on_unix
+                else
+                    return on_unix
+                end
+            end
         }
         -- 不同类型文件的 icons
         use 'nvim-tree/nvim-web-devicons'
@@ -111,6 +123,15 @@ return require('packer').startup({
         -- Theme
         use "folke/tokyonight.nvim"
         use { "ellisonleao/gruvbox.nvim" }
+
+        -- todo/fixme/issue 等高亮和跳转
+        -- use { "folke/todo-comments.nvim" }
+
+
+
+
+
+
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
