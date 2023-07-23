@@ -10,15 +10,14 @@ require('nvim-tree').setup {
     renderer = {
         group_empty = true,
     },
-    sync_root_with_cwd = true,
-    respect_buf_cwd = true,
+    sync_root_with_cwd = false,
+    respect_buf_cwd = false,
     update_focused_file = {
-        enable = false,
+        enable = true,
         update_root = false
     },
     on_attach = function(bufnr)
         local api = require "nvim-tree.api"
-
         local function opts(desc)
             return {
                 desc = "nvim-tree: " .. desc,
@@ -28,15 +27,13 @@ require('nvim-tree').setup {
                 nowait = true
             }
         end
-
-        -- default mappings
+        -- 默认映射
         api.config.mappings.default_on_attach(bufnr)
-
-        -- custom mappings
+        -- 自定义映射
         -- 返回上级目录
         vim.keymap.set('n', '<C-[>', api.tree.change_root_to_parent, opts('Up'))
         vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
-    end
+    end,
 }
 
 -- 从 VSCode 迁移过来的习惯，Ctrl-b 打开文件列表

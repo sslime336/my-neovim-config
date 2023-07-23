@@ -117,33 +117,34 @@ return require('packer').startup({
             "nvimdev/lspsaga.nvim",
             after = 'nvim-lspconfig',
             config = function()
-                require('lspsaga').setup {}
-            end,
+                require("lspsaga").setup {}
+            end
         }
         -- Theme
         use "folke/tokyonight.nvim"
         use { "ellisonleao/gruvbox.nvim" }
 
+        use {
+            'crusj/bookmarks.nvim',
+            branch = 'main',
+            requires = { 'kyazdani42/nvim-web-devicons' },
+            config = function()
+            end
+        }
         -- todo/fixme/issue 等高亮和跳转
-        -- use { "folke/todo-comments.nvim" }
+        use { "folke/todo-comments.nvim" }
 
 
         -- 函数作用域竖线提示
-        -- use "lukas-reineke/indent-blankline.nvim"
-
-
-        -- 相同单词下划线标注
         -- use {
-        --     'yamatsum/nvim-cursorline',
+        --     'lukas-reineke/indent-blankline.nvim',
         --     config = function()
-        --         require 'nvim-cursorline'.setup {}
+        --         require('indent-blankline').setup {
+        --             show_current_context = false,
+        --             show_current_context_start = false,
+        --         }
         --     end
         -- }
-        --
-
-
-
-
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins

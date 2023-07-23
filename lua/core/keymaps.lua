@@ -7,11 +7,10 @@ local opt = {
     silent = true,
 }
 -- 在命令模式粘贴需要设置 silent 为 false 结果才能直接显示出来
-local opt_no_silent = {
+local opt2 = {
     noremap = true,
     silent = false,
 }
-
 
 function format_code_lsp()
     vim.lsp.buf.format { async = true }
@@ -20,7 +19,12 @@ end
 -- 格式化、保存当前文件
 vim.keymap.set('n', '<C-s>', ':lua format_code_lsp()<CR>:w<CR>', opt)
 
--- 插入模式下 Ctrl-v 能粘贴
+-- 命令/插入模式下 Ctrl-v 能粘贴
 vim.keymap.set('i', '<C-v>', '<Esc>pa', opt)
--- 命令模式下 Ctrl-v 能粘贴
-vim.keymap.set('c', '<C-v>', '<C-r>"', opt_no_silent)
+vim.keymap.set('c', '<C-v>', '<C-r>"', opt2)
+
+-- 设置分屏大小 Ctrl + 上下左右
+vim.keymap.set('n', '<C-Up>', '<C-w>+', opt)
+vim.keymap.set('n', '<C-Down>', '<C-w>-', opt)
+vim.keymap.set('n', '<C-Left>', '<C-w><', opt)
+vim.keymap.set('n', '<C-Right>', '<C-w>>', opt)
