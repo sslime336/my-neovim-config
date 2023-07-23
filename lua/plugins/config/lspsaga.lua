@@ -13,7 +13,7 @@ vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opt)
 -- 跳转到实现
 vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
 -- 重命名
-vim.keymap.set("n", "<space>r", "<cmd>Lspsaga rename<CR>", opt)
+vim.keymap.set("n", "<space>rn", "<cmd>Lspsaga rename<CR>", opt)
 -- 显示错误信息
 vim.keymap.set("n", "<space>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
 -- 跳转到上一个错误
