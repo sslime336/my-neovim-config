@@ -51,4 +51,6 @@ load_batch {
     'lspsaga',
     -- todo/fixme/issue 等跳转
     -- 'todo-comments',
+    -- 书签
+    'bookmarks',
 }

@@ -124,12 +124,29 @@ return require('packer').startup({
         use "folke/tokyonight.nvim"
         use { "ellisonleao/gruvbox.nvim" }
 
+        use {
+            'crusj/bookmarks.nvim',
+            branch = 'main',
+            requires = { 'kyazdani42/nvim-web-devicons' },
+            config = function()
+            end
+        }
+
         -- todo/fixme/issue 等高亮和跳转
         -- use { "folke/todo-comments.nvim" }
 
 
         -- 函数作用域竖线提示
-        -- use "lukas-reineke/indent-blankline.nvim"
+        -- use {
+        --     'lukas-reineke/indent-blankline.nvim',
+        --     config = function()
+        --         require('indent-blankline').setup {
+        --             show_current_context = false,
+        --             show_current_context_start = false,
+        --         }
+        --     end
+        -- }
+
 
 
         -- 相同单词下划线标注
