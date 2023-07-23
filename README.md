@@ -100,8 +100,6 @@ OS: Windows10/Ubuntu20.04(WSL2)
 
 - akinsho/toggleterm.nvim 内嵌终端
 
-#### 语法高亮
-
 #### Git
 
 - lewis6991/gitsigns.nvim Git 信息提示高亮
@@ -112,11 +110,13 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - ellisonleao/gruvbox.nvim
 - folke/tokyonight.nvim
 
+#### 语法高亮
+
+- nvim-treesitter/nvim-treesitter
 
 #### 注释/文档
 
 - numToStr/Comment.nvim 一键注释
-- nvim-treesitter/nvim-treesitter 语法高亮
 - crusj/bookmarks.nvim
 - folke/todo-comments.nvim
 
