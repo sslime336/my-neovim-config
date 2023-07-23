@@ -50,7 +50,7 @@ load_batch {
     -- Lsp 美化
     'lspsaga',
     -- todo/fixme/issue 等跳转
-    -- 'todo-comments',
+    'todo-comments',
     -- 书签
     'bookmarks',
 }

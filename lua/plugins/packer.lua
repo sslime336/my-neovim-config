@@ -131,9 +131,8 @@ return require('packer').startup({
             config = function()
             end
         }
-
         -- todo/fixme/issue 等高亮和跳转
-        -- use { "folke/todo-comments.nvim" }
+        use { "folke/todo-comments.nvim" }
 
 
         -- 函数作用域竖线提示
@@ -146,21 +145,6 @@ return require('packer').startup({
         --         }
         --     end
         -- }
-
-
-
-        -- 相同单词下划线标注
-        -- use {
-        --     'yamatsum/nvim-cursorline',
-        --     config = function()
-        --         require 'nvim-cursorline'.setup {}
-        --     end
-        -- }
-        --
-
-
-
-
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins

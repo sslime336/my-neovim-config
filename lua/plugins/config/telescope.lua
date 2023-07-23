@@ -12,6 +12,7 @@ vim.keymap.set('n', '<space>h', builtin.help_tags, {})
 -- telescope 拓展
 require('telescope').load_extension('projects')
 require("telescope").load_extension("bookmarks")
+require("telescope").load_extension("todo-comments")
 
 -- projects
 local recent_projects = [[:lua require 'telescope'.extensions.projects.projects {}<CR>]]
