@@ -117,8 +117,8 @@ return require('packer').startup({
             "nvimdev/lspsaga.nvim",
             after = 'nvim-lspconfig',
             config = function()
-                require('lspsaga').setup {}
-            end,
+                require("lspsaga").setup {}
+            end
         }
         -- Theme
         use "folke/tokyonight.nvim"
