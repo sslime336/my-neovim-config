@@ -22,6 +22,7 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - packer 插件管理
 - Tabnine AI 辅助代码补全
 - hop(NvimのEasymotion)精确跳转
+- Auto session save, bufflines saving
 - Git 详情支持(inline blame等)，冲突处理支持
 - 跨平台配置
 - Lsp 支持/美化
