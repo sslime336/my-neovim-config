@@ -23,7 +23,7 @@ require('lualine').setup {
         lualine_c = { 'filename' },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
-        lualine_z = { 'location', 'os.date()' }
+        lualine_z = { 'location', 'os.date()', 'vim.cmd"pwd"' }
     },
     inactive_sections = {
         lualine_a = {},
