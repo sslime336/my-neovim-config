@@ -8,7 +8,8 @@ require 'toggleterm'.setup {
     -- 进入终端自动进入 INSERT 模式
     start_in_insert = true,
     -- 打开终端的位置
-    direction = 'float', -- 'vertical' | 'horizontal' | 'tab' | 'float'
+    -- 2<C-\>: 打开第二个终端，这种写法不支持 tab 和 float
+    direction = 'horizontal', -- 'vertical' | 'horizontal' | 'tab' | 'float'
 }
 
 -- 在弹出的终端中也能使用 vim 下的快捷键，但只能在 INSERT 模式下编辑，
