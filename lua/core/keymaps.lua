@@ -17,7 +17,7 @@ function format_code_lsp()
 end
 
 -- 格式化、保存当前文件
-vim.keymap.set('n', '<C-s>', ':lua format_code_lsp()<CR>:w<CR>', opt)
+vim.keymap.set('n', '<C-s>', ':lua format_code_lsp()<CR>:w<CR>:set nu run<CR>', opt)
 
 -- 命令/插入模式下 Ctrl-v 能粘贴
 vim.keymap.set('i', '<C-v>', '<Esc>pa', opt)
