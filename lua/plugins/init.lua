@@ -55,4 +55,6 @@ load_batch {
     'bookmarks',
     -- 作用域标线
     'indent-blankline',
+    -- Session
+    'possession',
 }

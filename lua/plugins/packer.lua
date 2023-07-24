@@ -132,6 +132,9 @@ return require('packer').startup({
         use { "folke/todo-comments.nvim" }
         -- 函数作用域竖线提示
         use { 'lukas-reineke/indent-blankline.nvim' }
+        -- Session
+        use { 'jedrzejboczar/possession.nvim' }
+
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
