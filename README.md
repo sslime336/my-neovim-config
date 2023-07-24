@@ -20,6 +20,7 @@ Currently unknown
 - ssh
 - translation
 - session
+- 当前代码 require 可能会造成一定的问题，需要重新整理
 
 ## 使用手册
 
