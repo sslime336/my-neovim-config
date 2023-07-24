@@ -10,6 +10,10 @@ OS: Windows10/Ubuntu20.04(WSL2)
 
 终端: Git Bash on Windows terminal (终端主题: **One Half Dark** theme), Bash
 
+## 已知问题
+
+Currently unknown
+
 ## TODO
 
 - debug support

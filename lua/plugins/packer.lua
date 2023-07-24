@@ -127,9 +127,6 @@ return require('packer').startup({
         use {
             'crusj/bookmarks.nvim',
             branch = 'main',
-            requires = { 'kyazdani42/nvim-web-devicons' },
-            config = function()
-            end
         }
         -- todo/fixme/issue 等高亮和跳转
         use { "folke/todo-comments.nvim" }
