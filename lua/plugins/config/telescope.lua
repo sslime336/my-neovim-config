@@ -2,6 +2,7 @@ local builtin = require('telescope.builtin')
 local t = require('telescope')
 
 -- 查找文件，进去是 INSERT，退出要敲两遍 `Ctrl-[`
+-- 以当前打开的文件所在目录为根目录
 vim.keymap.set('n', '<space>f', builtin.find_files, {})
 -- 查找从根目录开始的文件中与要求匹配具体的内容
 vim.keymap.set('n', '<space>g', builtin.live_grep, {})
