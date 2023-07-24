@@ -12,12 +12,15 @@ local opt2 = {
     silent = false,
 }
 
-function format_code_lsp()
-    vim.lsp.buf.format { async = true }
+function ctrl_s()
+    vim.lsp.buf.format { async = true };
+    vim.cmd('w');
+    vim.cmd('set nu rnu');
+    vim.cmd('SessionSave!');
 end
 
 -- 格式化、保存当前文件
-vim.keymap.set('n', '<C-s>', ':lua format_code_lsp()<CR>:w<CR>:set nu rnu<CR>', opt)
+vim.keymap.set('n', '<C-s>', ':lua ctrl_s()<CR><CR>', opt)
 
 -- 命令/插入模式下 Ctrl-v 能粘贴
 vim.keymap.set('i', '<C-v>', '<Esc>pa', opt)
