@@ -54,5 +54,5 @@ load_batch {
     -- 书签
     'bookmarks',
     -- 作用域标线
-    'indent-blankline'
+    'indent-blankline',
 }
