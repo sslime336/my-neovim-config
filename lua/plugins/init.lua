@@ -53,4 +53,6 @@ load_batch {
     'todo-comments',
     -- 书签
     'bookmarks',
+    -- 作用域标线
+    'indent-blankline'
 }

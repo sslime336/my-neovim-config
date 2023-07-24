@@ -130,17 +130,8 @@ return require('packer').startup({
         }
         -- todo/fixme/issue 等高亮和跳转
         use { "folke/todo-comments.nvim" }
-
-        -- 函数作用域竖线提示(这个目前竖线位置有点不对)
-        -- use {
-        --     'lukas-reineke/indent-blankline.nvim',
-        --     config = function()
-        --         require('indent-blankline').setup {
-        --             show_current_context = false,
-        --             show_current_context_start = false,
-        --         }
-        --     end
-        -- }
+        -- 函数作用域竖线提示
+        use { 'lukas-reineke/indent-blankline.nvim' }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
