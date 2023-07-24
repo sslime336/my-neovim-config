@@ -20,6 +20,7 @@ t.load_extension('possession')
 -- projects
 local recent_projects = [[:lua require 'telescope'.extensions.projects.projects {}<CR>]]
 vim.keymap.set('n', '<space>p', recent_projects)
-
 -- possession
 vim.keymap.set('n', '<space>s', ':Telescope possession list<CR>', {})
+-- bookmarks
+vim.keymap.set('n', '<space>m', ':Telescope bookmarks<CR>', {})
