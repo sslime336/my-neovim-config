@@ -1,4 +1,5 @@
 local builtin = require('telescope.builtin')
+local t = require('telescope')
 
 -- 查找文件，进去是 INSERT，退出要敲两遍 `Ctrl-[`
 vim.keymap.set('n', '<space>f', builtin.find_files, {})
@@ -10,9 +11,9 @@ vim.keymap.set('n', '<space>b', builtin.buffers, {})
 vim.keymap.set('n', '<space>h', builtin.help_tags, {})
 
 -- telescope 拓展
-require('telescope').load_extension('projects')
-require("telescope").load_extension("bookmarks")
-require("telescope").load_extension("todo-comments")
+t.load_extension('projects')
+t.load_extension("bookmarks")
+t.load_extension("todo-comments")
 
 -- projects
 local recent_projects = [[:lua require 'telescope'.extensions.projects.projects {}<CR>]]
