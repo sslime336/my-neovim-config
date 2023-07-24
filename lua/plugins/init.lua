@@ -57,4 +57,6 @@ load_batch {
     'indent-blankline',
     -- Session
     'possession',
+    -- Git 冲突处理
+    'git-conflict',
 }

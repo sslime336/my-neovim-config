@@ -134,6 +134,11 @@ return require('packer').startup({
         use { 'lukas-reineke/indent-blankline.nvim' }
         -- Session
         use { 'jedrzejboczar/possession.nvim' }
+        -- 处理 Git 冲突
+        use {
+            'akinsho/git-conflict.nvim',
+            tag = "*",
+        }
 
 
         -- Automatically set up your configuration after cloning packer.nvim
