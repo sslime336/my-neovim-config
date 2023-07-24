@@ -6,7 +6,7 @@ require('possession').setup {
     logfile = false,
     prompt_no_cr = false,
     autosave = {
-        current = false,  -- or fun(name): boolean
+        current = true,   -- or fun(name): boolean
         tmp = false,      -- or fun(): boolean
         tmp_name = 'tmp', -- or fun(): string
         on_load = true,
@@ -39,17 +39,11 @@ require('possession').setup {
                 custom = false, -- or fun(win): boolean
             },
         },
-        delete_hidden_buffers = {
-            hooks = {
-                'before_load',
-                vim.o.sessionoptions:match('buffer') and 'before_save',
-            },
-            force = false, -- or fun(buf): boolean
-        },
+        delete_hidden_buffers = false,
         nvim_tree = true,
         tabby = true,
         dap = true,
-        delete_buffers = false,
+        delete_buffers = true,
     },
     telescope = {
         list = {
@@ -63,4 +57,3 @@ require('possession').setup {
         },
     },
 }
-

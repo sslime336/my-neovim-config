@@ -16,7 +16,6 @@ function ctrl_s()
     vim.lsp.buf.format { async = true };
     vim.cmd('w');
     vim.cmd('set nu rnu');
-    vim.cmd('SessionSave!');
 end
 
 -- 格式化、保存当前文件

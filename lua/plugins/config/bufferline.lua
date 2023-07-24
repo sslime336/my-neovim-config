@@ -19,7 +19,6 @@ require("bufferline").setup {
             delay = 200,
             reveal = { 'close' }
         }
-
     },
 }
 
