@@ -6,8 +6,6 @@ OS: Windows10/Ubuntu20.04(WSL2)
 
 字体: FiraCode Nerd Font Mono
 
-字号: 10
-
 终端: Git Bash on Windows terminal (终端主题: **One Half Dark** theme), Bash
 
 ## TODO
