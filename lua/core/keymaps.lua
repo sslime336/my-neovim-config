@@ -19,7 +19,7 @@ function ctrl_s()
 end
 
 -- 格式化、保存当前文件
-vim.keymap.set('n', '<C-s>', ':lua ctrl_s()<CR><CR>', opt)
+vim.keymap.set('n', '<C-s>', ':lua ctrl_s()<CR>', opt)
 
 -- 命令/插入模式下 Ctrl-v 能粘贴
 vim.keymap.set('i', '<C-v>', '<Esc>pa', opt)

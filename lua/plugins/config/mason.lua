@@ -29,7 +29,7 @@ local function on_attach(client, bufnr)
     -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opt)
 
     -- lint(其实只是 format)
-    vim.keymap.set('n', '<space>l', function() vim.lsp.buf.format { async = true } end, opt)
+    -- vim.keymap.set('n', '<space>l', function() vim.lsp.buf.format { async = true } end, opt)
 end
 
 -- After setting up mason-lspconfig you may set up servers via lspconfig
