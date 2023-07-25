@@ -49,3 +49,6 @@ vim.keymap.set('n', '<leader>gv', ':Gitsigns preview_hunk<CR>')
 vim.keymap.set('n', '<leader>gi', ':Gitsigns preview_hunk_inline<CR>')
 vim.keymap.set('n', '<leader>gn', ':Gitsigns prev_hunk<CR>')
 vim.keymap.set('n', '<leader>gp', ':Gitsigns next_hunk<CR>')
+
+vim.keymap.set('n', '<leader>ga', ':Gitsigns stage_hunk<CR>')
+vim.keymap.set('n', '<leader>gd', ':Gitsigns undo_stage_hunk<CR>')
