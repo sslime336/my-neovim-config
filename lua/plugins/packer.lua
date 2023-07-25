@@ -147,6 +147,9 @@ return require('packer').startup({
                 require('crates').setup()
             end,
         }
+        -- 高亮光标所在单词的同名变量
+        use { 'yamatsum/nvim-cursorline' }
+
 
 
         -- Automatically set up your configuration after cloning packer.nvim

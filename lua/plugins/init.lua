@@ -59,4 +59,6 @@ load_batch {
     'possession',
     -- Git 冲突处理
     'git-conflict',
+    -- 用于同名变量下划线高亮
+    'nvim-cursorline',
 }
