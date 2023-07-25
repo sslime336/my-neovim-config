@@ -31,7 +31,7 @@ require('nvim-tree').setup {
         api.config.mappings.default_on_attach(bufnr)
         -- 自定义映射
         -- 返回上级目录
-        vim.keymap.set('n', '<C-[>', '<C-w>l', opts('Back2Editor'))
+        vim.keymap.set('n', '<C-[>', '<C-w>l', opts('Back to Editor'))
         vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
     end,
 }
