@@ -58,8 +58,8 @@ cmp.setup {
         -- { 'i', 'c' } 表示可在 INSERT 和 COMMAND 模式使用
         ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
         ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-1),
+        ['<C-f>'] = cmp.mapping.scroll_docs(1),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         -- Accept currently selected item. Set `select` to `false` to only
