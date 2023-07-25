@@ -73,6 +73,7 @@ cmp.setup {
         { name = 'vsnip' }, -- For vsnip users.
         { name = 'buffer' },
         { name = 'path' },
+        { name = "crates" }, -- crates 补全
     }
 }
 

@@ -139,6 +139,14 @@ return require('packer').startup({
             'akinsho/git-conflict.nvim',
             tag = "*",
         }
+        -- crates
+        use {
+            'saecki/crates.nvim',
+            tag = 'v0.3.0',
+            config = function()
+                require('crates').setup()
+            end,
+        }
 
 
         -- Automatically set up your configuration after cloning packer.nvim
