@@ -26,7 +26,7 @@ local function on_attach(client, bufnr)
     -- 重命名
     -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opt)
     -- vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opt)
+    -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opt)
 
     -- lint(其实只是 format)
     vim.keymap.set('n', '<space>l', function() vim.lsp.buf.format { async = true } end, opt)
