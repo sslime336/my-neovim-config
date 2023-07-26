@@ -31,6 +31,7 @@ vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- 关闭当前标签页，这里主要是为了让关闭后保持 NvimTree 在关闭标签页时的状态(是否显示出来)
 local cmds =
+    '<C-w>l<Esc>' ..
     ':bdelete %<CR>' ..
     ':NvimTreeFindFileToggle<CR>' ..
     ':NvimTreeFindFileToggle<CR>' ..
