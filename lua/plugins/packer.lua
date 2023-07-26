@@ -18,8 +18,14 @@ local ensure_packer = function()
     end
     return false
 end
-
 local PACKER_BOOTSTRAPED = ensure_packer()
+
+
+local apply_my_config = function(cfg_name)
+    local my_config = 'plugins.config.' .. cfg_name
+    return require(my_config).setup {}
+end
+
 
 return require('packer').startup({
     function(use)
@@ -117,7 +123,17 @@ return require('packer').startup({
             "nvimdev/lspsaga.nvim",
             after = 'nvim-lspconfig',
             config = function()
-                require("lspsaga").setup {}
+                require("lspsaga").setup {
+                    finder = {
+                        keys = {
+                            toggle_or_open = '<CR>'
+                        }
+                    },
+                    lightbulb = {
+                        sign     = false,
+                        debounce = 12,
+                    },
+                }
             end
         }
         -- Theme
