@@ -51,6 +51,7 @@ return {
         vim.keymap.set('n', '<leader>gp', ':Gitsigns next_hunk<CR>')
 
         vim.keymap.set('n', '<leader>ga', ':Gitsigns stage_hunk<CR>')
-        vim.keymap.set('n', '<leader>gd', ':Gitsigns undo_stage_hunk<CR>')
+        vim.keymap.set('n', '<leader>gr', ':Gitsigns undo_stage_hunk<CR>')
+        vim.keymap.set('n', '<leader>gu', ':Gitsigns reset_hunk<CR>')
     end
 }
