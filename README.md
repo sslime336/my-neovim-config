@@ -12,12 +12,12 @@ OS: Windows10/Ubuntu20.04(WSL2)
 
 - debug support
 - ssh
-- translation
+- todo-comments 是否支持类似 TODO(sslime336): xxx 这样的？需要看看文档 :h todo-comments.txt?
 - **my-nvim-manual**
 
 ## Features
 
-- packer 插件管理
+- lazy 插件管理
 - Tabnine AI 辅助代码补全
 - hop(NvimのEasymotion)精确跳转
 - Auto session save, bufflines saving
@@ -35,9 +35,10 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - VSCode 类似标签页/VSCode icon
 - 代码快速注释
 
-## 已知问题
+## 已知问题 (可能已修复但未验证)
 
-代码 require 之间可能会造成一定的问题，需要重新整理配置代码布局
+- bookmarks 有时啥都找不到，还不清楚具体怎么用
+- 有时新窗口行号全消失
 
 ## 食用手册
 
@@ -54,6 +55,11 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - `<space>b`: 在当前 buffer 中查找
 - `<space>m`: 查找书签
 
+#### 跳转
+
+- `<leader>b` 开启标签页跳转选择
+- `<leader>B` 关闭标签页跳转选择
+
 #### Lsp
 
 - `gr`: 查找引用
@@ -61,7 +67,7 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - `gn`: 跳转到下一个报错/警告的地方
 - `gd`: 弹出窗口查看定义
 - `gD`: 跳转到定义
-- `gh`: 显示变量/函数等的信息
+- `<C-k>`: 显示变量/函数等的信息
 - `<space>dw`: 显示当前 workspace 中的诊断信息
 - `<space>dl`: 显示当前行的诊断信息
 - `<space>j`: Quick Fix，Code Action
