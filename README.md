@@ -75,7 +75,8 @@ OS: Windows10/Ubuntu20.04(WSL2)
 #### Git
 
 - `<leader>ga`: git add
-- `<leader>gd`: undo git add
+- `<leader>gr`: undo git add
+- `<leader>gu`: 恢复到更改前的样子
 - `<leader>gi`: 在原文本中查看变化
 - `<leader>gv`: 在弹出的小窗口中查看变话(ps:
   感觉不如上一个快捷键展示效果好)
