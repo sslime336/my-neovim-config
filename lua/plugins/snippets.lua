@@ -1,7 +1,15 @@
 -- snippets
 
 return {
-    { 'hrsh7th/cmp-vsnip' },
-    { 'hrsh7th/vim-vsnip' },
-    { 'rafamadriz/friendly-snippets' },
+    {
+        'hrsh7th/cmp-vsnip',
+        -- lazy = true,
+    },
+    {
+        'hrsh7th/vim-vsnip',
+        -- lazy = true,
+    },
+    {
+        'rafamadriz/friendly-snippets'
+    },
 }

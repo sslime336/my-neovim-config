@@ -2,6 +2,7 @@
 
 return {
     'crusj/bookmarks.nvim',
+    -- lazy = true,
     keys = {
         { "\\\\", mode = { "n" } },
     },

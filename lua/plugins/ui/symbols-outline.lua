@@ -2,6 +2,7 @@
 
 return {
     'simrat39/symbols-outline.nvim',
+    -- lazy = true,
     config = function()
         local opt = {
             noremap = true,

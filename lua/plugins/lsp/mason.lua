@@ -3,6 +3,7 @@
 return {
     {
         "williamboman/mason.nvim",
+        -- lazy = true,
         config = function()
             require("mason").setup()
             require("mason-lspconfig").setup {
@@ -45,6 +46,12 @@ return {
             require("lspconfig").jsonls.setup { on_attach = on_attach }
         end
     },
-    { "williamboman/mason-lspconfig.nvim" },
-    { "neovim/nvim-lspconfig" },
+    { 
+        "williamboman/mason-lspconfig.nvim",
+        -- lazy = true,
+    },
+    { 
+        "neovim/nvim-lspconfig",
+        -- lazy = true,
+    },
 }

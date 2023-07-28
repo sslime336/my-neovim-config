@@ -13,6 +13,7 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - debug support
 - ssh
 - todo-comments 是否支持类似 TODO(sslime336): xxx 这样的？需要看看文档 :h todo-comments.txt?
+- 加快启动
 - **my-nvim-manual**
 
 ## Features

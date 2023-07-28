@@ -3,6 +3,7 @@
 return {
     {
         'hrsh7th/nvim-cmp',
+        -- lazy = true,
         config = function()
             local cmp = require('cmp')
             -- 使用 VSCode 的标识符 ui
@@ -118,6 +119,7 @@ return {
     -- tabnine AI 辅助
     {
         'tzachar/cmp-tabnine',
+        lazy = true,
         dependencies = { "hrsh7th/nvim-cmp" },
         build        = function()
             local on_windows = 'powershell ./install.ps1' -- on Windows
@@ -134,10 +136,25 @@ return {
         end
     },
     -- 各种场景的自动补全
-    { 'hrsh7th/cmp-buffer' },
-    { 'hrsh7th/cmp-path' },
-    { 'hrsh7th/cmp-cmdline' },
-    { 'hrsh7th/cmp-nvim-lsp' },
+    {
+        'hrsh7th/cmp-buffer',
+        -- lazy = true,
+    },
+    {
+        'hrsh7th/cmp-path',
+        -- lazy = true,
+    },
+    {
+        'hrsh7th/cmp-cmdline',
+        -- lazy = true,
+    },
+    {
+        'hrsh7th/cmp-nvim-lsp',
+        -- lazy = true,
+    },
     -- lspkind 提供 VSCode 样式的代码补全 ui(函数，接口等的 ui)
-    { 'onsails/lspkind-nvim' },
+    {
+        'onsails/lspkind-nvim',
+        -- lazy = true,
+    },
 }

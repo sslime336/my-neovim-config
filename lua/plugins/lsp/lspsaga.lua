@@ -3,6 +3,7 @@
 return {
     "nvimdev/lspsaga.nvim",
     dependencies = { 'nvim-lspconfig' },
+    -- lazy = true,
     config = function()
         require("lspsaga").setup(
             {
