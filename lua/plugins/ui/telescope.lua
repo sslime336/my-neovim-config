@@ -18,25 +18,14 @@ return {
             vim.keymap.set('n', '<space>h', builtin.help_tags, {})
 
             -- telescope 拓展
-            t.load_extension('projects')
             t.load_extension("bookmarks")
             t.load_extension("todo-comments")
             t.load_extension('possession')
 
-            -- projects
-            local recent_projects = [[:lua require 'telescope'.extensions.projects.projects {}<CR>]]
-            vim.keymap.set('n', '<space>p', recent_projects)
             -- possession
             vim.keymap.set('n', '<space>s', ':Telescope possession list<CR>', {})
             -- bookmarks
             vim.keymap.set('n', '<space>m', ':Telescope bookmarks<CR>', {})
         end
     },
-    -- nvim project 支持
-    {
-        'ahmedkhalf/project.nvim',
-        config = function()
-            require("project_nvim").setup {}
-        end
-    }
 }
