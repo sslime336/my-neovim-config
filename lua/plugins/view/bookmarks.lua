@@ -3,9 +3,9 @@
 return {
     'crusj/bookmarks.nvim',
     -- lazy = true,
-    keys = {
-        { "\\\\", mode = { "n" } },
-    },
+    -- keys = {
+    --     { "\\\\", mode = { "n" } },
+    -- },
     branch = 'main',
     dependencies = { 'nvim-web-devicons' },
     config = function()
