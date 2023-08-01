@@ -31,4 +31,3 @@ require('lazy').setup({
         { import = 'plugins.view' },
     },
 }, opts)
-vim.keymap.set('n', '<leader><space>', ':Lazy<CR>', { silent = true, noremap = true })

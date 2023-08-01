@@ -45,7 +45,7 @@ return {
         vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
         vim.keymap.set("n", "<M-h>", ":BufferLineMovePrev<CR>", opt)
         vim.keymap.set("n", "<M-l>", ":BufferLineMoveNext<CR>", opt)
-        vim.keymap.set("n", "<leader>b", ":BufferLinePick<CR>", opt) -- 选择标签页
+        vim.keymap.set("n", "<leader><space>", ":BufferLinePick<CR>", opt) -- 选择标签页
 
         -- 关闭当前标签页，这里主要是为了让关闭后保持 NvimTree 在关闭标签页时的状态(是否显示出来)
         local cmds =
