@@ -8,9 +8,9 @@ return {
             ensure_installed = {
                 "c",
                 "lua",
-                "rust",
-                "markdown",
-                "markdown_inline",
+                -- "rust",
+                -- "markdown",
+                -- "markdown_inline",
             },
             -- Install parsers synchronously(only applied to `ensure_installed`)
             sync_install = false,
