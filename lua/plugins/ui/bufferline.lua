@@ -9,7 +9,8 @@ return {
         local bufferline = require("bufferline")
         bufferline.setup {
             options = {
-                highlight = {},
+                highlight = {
+                },
                 -- 使用 nvim 内置lsp
                 diagnostics = "nvim_lsp",
                 -- 左侧让出 nvim-tree 的位置
@@ -22,7 +23,7 @@ return {
                     },
                 },
                 style_preset = bufferline.style_preset.no_italic,
-                separator_style = 'slope', -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
+                separator_style = 'thick', -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
                 indicator = {
                     icon = '▎', -- this should be omitted if indicator style is not 'icon'
                     style = 'underline',
