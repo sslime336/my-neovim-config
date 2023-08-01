@@ -2,7 +2,9 @@
 
 return {
     'nvim-tree/nvim-tree.lua',
-    -- lazy = true,
+    keys = {
+        { "<C-b>" },
+    },
     config = function()
         require('nvim-tree').setup(
             {

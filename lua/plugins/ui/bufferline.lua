@@ -8,6 +8,8 @@ return {
         vim.opt.termguicolors = true
 
         require("bufferline").setup {
+            highlights = {
+            },
             options = {
                 -- 使用 nvim 内置lsp
                 diagnostics = "nvim_lsp",
@@ -36,8 +38,9 @@ return {
 
         vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
         vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
-        vim.keymap.set("n", "<leader>b", ":BufferLinePick<CR>", opt)      -- 选择标签页
-        vim.keymap.set("n", "<leader>B", ":BufferLinePickClose<CR>", opt) -- 关闭标签页选择，或者直接 <C-[>/<Esc>
+        vim.keymap.set("n", "<M-h>", ":BufferLineMovePrev<CR>", opt)
+        vim.keymap.set("n", "<M-l>", ":BufferLineMoveNext<CR>", opt)
+        vim.keymap.set("n", "<leader>b", ":BufferLinePick<CR>", opt) -- 选择标签页
 
         -- 关闭当前标签页，这里主要是为了让关闭后保持 NvimTree 在关闭标签页时的状态(是否显示出来)
         local cmds =

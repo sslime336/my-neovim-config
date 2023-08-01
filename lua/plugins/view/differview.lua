@@ -2,6 +2,7 @@
 
 return {
     'sindrets/diffview.nvim',
+    event = "VeryLazy",
     config = function()
         vim.opt.fillchars:append { diff = " " }
     end

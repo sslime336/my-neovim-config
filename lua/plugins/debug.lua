@@ -1,6 +1,5 @@
 -- debug
 
--- TODO: add debug support
 return {
-
+    'mfussenegger/nvim-dap',
 }

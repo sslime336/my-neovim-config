@@ -3,7 +3,16 @@
 return {
     {
         'hrsh7th/nvim-cmp',
-        -- lazy = true,
+        event = "VeryLazy",
+        dependencies = {
+            -- 各种场景的自动补全
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'hrsh7th/cmp-cmdline' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            -- lspkind 提供 VSCode 样式的代码补全 ui(函数，接口等的 ui)
+            { 'onsails/lspkind-nvim' },
+        },
         config = function()
             local cmp = require('cmp')
             -- 使用 VSCode 的标识符 ui
@@ -19,8 +28,7 @@ return {
             cmp.setup {
                 formatting = {
                     format = function(entry, vim_item)
-                        -- if you have lspkind installed, you can use it like
-                        -- in the following line:
+                        -- 使用 lspkind
                         vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = "symbol" })
                         vim_item.menu = source_mapping[entry.source.name]
                         if entry.source.name == "cmp_tabnine" then
@@ -110,16 +118,14 @@ return {
 
             -- Set up lspconfig.
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-            -- require('lspconfig')['cmp_nvim_lsp'].setup {
-            --     capabilities = capabilities
-            -- }
+            -- require('lspconfig')['lua_ls'].setup { capabilities = capabilities }
+            -- require('lspconfig')['gopls'].setup { capabilities = capabilities }
         end
     },
     -- tabnine AI 辅助
     {
         'tzachar/cmp-tabnine',
-        lazy = true,
+        event        = "InsertEnter",
         dependencies = { "hrsh7th/nvim-cmp" },
         build        = function()
             local on_windows = 'powershell ./install.ps1' -- on Windows
@@ -134,27 +140,5 @@ return {
                 return defalut_install_script
             end
         end
-    },
-    -- 各种场景的自动补全
-    {
-        'hrsh7th/cmp-buffer',
-        -- lazy = true,
-    },
-    {
-        'hrsh7th/cmp-path',
-        -- lazy = true,
-    },
-    {
-        'hrsh7th/cmp-cmdline',
-        -- lazy = true,
-    },
-    {
-        'hrsh7th/cmp-nvim-lsp',
-        -- lazy = true,
-    },
-    -- lspkind 提供 VSCode 样式的代码补全 ui(函数，接口等的 ui)
-    {
-        'onsails/lspkind-nvim',
-        -- lazy = true,
     },
 }

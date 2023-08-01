@@ -3,10 +3,12 @@
 
 return {
     'sslime336/hop.nvim',
+    keys = {
+        "<leader>",
+    },
     config = function()
         local hop = require('hop')
         local directions = require('hop.hint').HintDirection
-
         vim.keymap.set('n', '<leader>f',
             function()
                 hop.hint_char1(
@@ -16,7 +18,6 @@ return {
                     }
                 )
             end, { remap = true })
-
         vim.keymap.set('n', '<leader>F',
             function()
                 hop.hint_char1(

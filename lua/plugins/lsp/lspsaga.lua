@@ -2,8 +2,8 @@
 
 return {
     "nvimdev/lspsaga.nvim",
+    event = "VeryLazy",
     dependencies = { 'nvim-lspconfig' },
-    -- lazy = true,
     config = function()
         require("lspsaga").setup(
             {
@@ -24,7 +24,7 @@ return {
         -- 在悬浮窗查看定义
         vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opt)
         -- 跳转到定义
-        vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>:set rnu<CR>:set nu<CR>", opt)
+        vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>:set nu rnu<CR>", opt)
         -- 显示注释文档，Ctrl-K 跳入文档
         vim.keymap.set("n", "<C-k>", "<cmd>Lspsaga hover_doc<CR>", opt)
         -- 跳转到实现
@@ -40,7 +40,6 @@ return {
         vim.keymap.set("n", "gn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
         -- Finder(可对应 Lsp 中的 Reference)
         vim.keymap.set("n", "gr", "<cmd>Lspsaga finder<CR>", opt)
-
         -- Code Action
         vim.keymap.set("n", "<space>j", "<cmd>Lspsaga code_action<CR>", opt)
         vim.keymap.set("v", "<space>j", "<cmd>Lspsaga code_action<CR>", opt)

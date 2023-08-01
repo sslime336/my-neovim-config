@@ -16,31 +16,11 @@ OS: Windows10/Ubuntu20.04(WSL2)
 - 加快启动
 - **my-nvim-manual**
 
-## Features
-
-- lazy 插件管理
-- Tabnine AI 辅助代码补全
-- hop(NvimのEasymotion)精确跳转
-- Auto session save, bufflines saving
-- Git 详情支持(inline blame等)，冲突处理支持
-- 跨平台配置
-- Lsp 支持/美化
-- TODO/FIXME 等高亮
-- 书签 bookmarks
-- 自动补全/Snippets/智能括号补全
-- 状态栏
-- 文件自动保存
-- 终端集成
-- Outline 代码大纲
-- 主题(gruvbox/tokynight等)
-- VSCode 类似标签页/VSCode icon
-- 代码快速注释
-
 ## 食用手册
 
 ### 键位映射
 
-- Leader: ','
+- Leader: ';'
 
 #### 查找
 
@@ -84,6 +64,7 @@ OS: Windows10/Ubuntu20.04(WSL2)
   `<C-[>` 在终端进入普通模式，然后再敲 `2<C-\>`
   打开第二个终端(一般会在第一个的右边打开)
 
+Alt+h/l 移动标签页
 #### 窗口大小
 
 - `<C-Up>`

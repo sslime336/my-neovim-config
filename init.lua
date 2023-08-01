@@ -15,6 +15,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 local opts = {}
 require('lazy').setup({
+    change_detection = {
+        -- 自动检查配置文件更新
+        enabled = false,
+        notify = false, -- 当配置文件发生更改时发送通知
+    },
     spec = {
         { import = 'plugins' },
         { import = 'plugins.git' },

@@ -2,7 +2,7 @@ return {
     -- rust-tools for using rust-analyzer
     {
         'simrat39/rust-tools.nvim',
-        -- lazy = true,
+        ft = "rs",
         dependencies = { { 'neovim/nvim-lspconfig' } },
         config = function()
             require("rust-tools").setup({
@@ -16,7 +16,7 @@ return {
     -- Rust Cargo.toml 提示
     {
         'saecki/crates.nvim',
-        -- lazy = true,
+        ft = "toml",
         tag = 'v0.3.0',
         dependencies = { 'nvim-lua/plenary.nvim' },
         config = function()

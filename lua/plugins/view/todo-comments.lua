@@ -1,6 +1,7 @@
 -- todo/fixme/issue 等高亮和跳转
 return {
     "folke/todo-comments.nvim",
+    event = "VeryLazy",
     config = function()
         require("todo-comments").setup({})
         vim.keymap.set("n", "]t", function()

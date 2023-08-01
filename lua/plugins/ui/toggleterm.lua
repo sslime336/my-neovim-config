@@ -2,6 +2,9 @@
 
 return {
     "akinsho/toggleterm.nvim",
+    keys = {
+        { "<C-\\>" },
+    },
     config = function()
         require('toggleterm').setup {
             -- 终端打开的大小

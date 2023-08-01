@@ -3,13 +3,14 @@
 return {
     {
         'hrsh7th/cmp-vsnip',
-        -- lazy = true,
+        event = "InsertEnter",
     },
     {
         'hrsh7th/vim-vsnip',
-        -- lazy = true,
+        event = "InsertEnter",
     },
     {
-        'rafamadriz/friendly-snippets'
+        'rafamadriz/friendly-snippets',
+        event = "InsertEnter",
     },
 }

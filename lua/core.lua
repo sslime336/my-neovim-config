@@ -5,8 +5,8 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.mouse = 'a'
 
 -- <leader>
-vim.g.mapleader = ','
-vim.g.maplocalleader = ','
+vim.g.mapleader = ';'
+vim.g.maplocalleader = ';'
 
 -- 启用行号和相对行号
 vim.o.number = true
@@ -45,3 +45,4 @@ if cur_os_path_separator == '\\' then    -- On windows
 elseif cur_os_path_separator == '/' then -- On Unix-like OS
     vim.cmd('cd ' .. default_path_linux)
 end
+

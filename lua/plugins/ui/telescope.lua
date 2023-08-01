@@ -3,6 +3,9 @@
 return {
     {
         'nvim-telescope/telescope.nvim',
+        keys = {
+            { "<space>" },
+        },
         config = function()
             local builtin = require('telescope.builtin')
             local t = require('telescope')
@@ -18,14 +21,13 @@ return {
             vim.keymap.set('n', '<space>h', builtin.help_tags, {})
 
             -- telescope 拓展
-            t.load_extension("bookmarks")
             t.load_extension("todo-comments")
             t.load_extension('possession')
 
             -- possession
             vim.keymap.set('n', '<space>s', ':Telescope possession list<CR>', {})
-            -- bookmarks
-            vim.keymap.set('n', '<space>m', ':Telescope bookmarks<CR>', {})
+            -- todo-comments
+            vim.keymap.set('n', '<space>lt', ':TodoTelescope<CR>', {})
         end
     },
 }
