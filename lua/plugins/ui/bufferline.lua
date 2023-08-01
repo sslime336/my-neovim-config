@@ -6,11 +6,10 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
         vim.opt.termguicolors = true
-
-        require("bufferline").setup {
-            highlights = {
-            },
+        local bufferline = require("bufferline")
+        bufferline.setup {
             options = {
+                highlight = {},
                 -- 使用 nvim 内置lsp
                 diagnostics = "nvim_lsp",
                 -- 左侧让出 nvim-tree 的位置
@@ -22,12 +21,17 @@ return {
                         separator = false,
                     },
                 },
-                separator_style = "slant", -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
+                style_preset = bufferline.style_preset.no_italic,
+                separator_style = 'slope', -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
+                indicator = {
+                    icon = '▎', -- this should be omitted if indicator style is not 'icon'
+                    style = 'underline',
+                },
                 hover = {
                     enabled = true,
                     delay = 200,
                     reveal = { 'close' }
-                }
+                },
             },
         }
 
