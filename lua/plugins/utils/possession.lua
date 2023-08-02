@@ -49,7 +49,7 @@ return {
                 nvim_tree = true,
                 tabby = true,
                 dap = true,
-                delete_buffers = true,
+                delete_buffers = false,
             },
             telescope = {
                 list = {

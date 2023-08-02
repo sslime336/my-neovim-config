@@ -1,7 +1,8 @@
---
+-- Git view/stage/commit
 
 local M = {
     "NeogitOrg/neogit",
+    event = "VeryLazy",
     dependencies = "nvim-lua/plenary.nvim",
 }
 

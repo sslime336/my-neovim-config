@@ -9,9 +9,16 @@ function M.config()
     require('nightfox').setup({
         options = {
             styles = {
-                comments = "none",
-                keywords = "none",
-                types = "none",
+                comments     = "none",
+                conditionals = "none",
+                constants    = "none",
+                functions    = "none",
+                keywords     = "none",
+                numbers      = "none",
+                operators    = "none",
+                strings      = "none",
+                types        = "none",
+                variables    = "none",
             }
         }
     })
