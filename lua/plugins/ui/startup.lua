@@ -102,7 +102,7 @@ function M.config()
                 { " Recent Session", "Telescope possession list", "<leader>rs" },
                 { " Find File", "Telescope find_files", "<leader>ff" },
                 { " Find Word", "Telescope live_grep", "<leader>fw" },
-                { " File Browser", "Telescope file_browser", "<leader>fb" },
+                -- { " File Browser", "Telescope file_browser", "<leader>fb" },
                 -- { " Colorschemes", "Telescope colorscheme", "<leader>cs" },
                 { " New File", "lua require'startup'.new_file()", "<leader>nf" },
             },
