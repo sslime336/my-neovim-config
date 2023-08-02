@@ -79,8 +79,8 @@ return {
                     ['<Tab>'] = cmp.mapping.confirm({ select = true }),
                 },
                 sources = {
-                    { name = 'cmp_tabnine' },
                     { name = 'nvim_lsp' },
+                    { name = 'cmp_tabnine' },
                     { name = 'vsnip' }, -- For vsnip users.
                     { name = 'buffer' },
                     { name = 'path' },
