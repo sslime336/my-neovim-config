@@ -1,5 +1,5 @@
 -- 使用系统剪切板
-vim.o.clipboard = 'unnamedplus'
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
 
 -- 是否启用鼠标，不启用可以设置为空字符串: ''
 vim.o.mouse = 'a'
@@ -45,4 +45,3 @@ if cur_os_path_separator == '\\' then    -- On windows
 elseif cur_os_path_separator == '/' then -- On Unix-like OS
     vim.cmd('cd ' .. default_path_linux)
 end
-

@@ -18,6 +18,9 @@ M.config = function()
             custom = {},
             exclude = {},
         },
+        view                = {
+            width = 40,
+        },
         renderer            = {
             add_trailing = false,
             group_empty = true,
