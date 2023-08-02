@@ -2,10 +2,6 @@
 
 local M = {
     'nvim-tree/nvim-tree.lua',
-    event = "VeryLazy",
-    keys = {
-        { "\\" },
-    },
 }
 
 M.config = function()
