@@ -10,7 +10,15 @@ local M = {
 
 M.config = function()
     require('nvim-tree').setup({
-        renderer = {
+        filters             = {
+            git_ignored = false,
+            dotfiles = false,
+            git_clean = false,
+            no_buffer = false,
+            custom = {},
+            exclude = {},
+        },
+        renderer            = {
             add_trailing = false,
             group_empty = true,
             highlight_git = true,
@@ -31,19 +39,19 @@ M.config = function()
                 },
             },
             icons = {
-                webdev_colors = true,
-                git_placement = "before",
+                webdev_colors      = true,
+                git_placement      = "before",
                 modified_placement = "after",
-                padding = " ",
-                symlink_arrow = " ➛ ",
-                show = {
+                padding            = " ",
+                symlink_arrow      = " ➛ ",
+                show               = {
                     file = true,
                     folder = true,
                     folder_arrow = true,
                     git = true,
                     modified = true,
                 },
-                glyphs = {
+                glyphs             = {
                     default  = "",
                     symlink  = "",
                     bookmark = "󰆤",
@@ -73,13 +81,13 @@ M.config = function()
             special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
             symlink_destination = true,
         },
-        sync_root_with_cwd = false,
-        respect_buf_cwd = false,
+        sync_root_with_cwd  = false,
+        respect_buf_cwd     = false,
         update_focused_file = {
             enable = true,
             update_root = false
         },
-        on_attach = function(bufnr)
+        on_attach           = function(bufnr)
             local api = require "nvim-tree.api"
             local function opts(desc)
                 return {
