@@ -2,19 +2,37 @@
 
 ## Preview
 
+### Dashboard(startup.nvim)
+![startup.nvim](imgs/dashboard-startup.png)
 
+### Session(possession.nvim)
+![possession.nvim](imgs/session-possession.png)
 
-## 使用环境
+### Coding
+![coding](imgs/lsp-code_action-outline-dirt_tree.png)
+
+### Terminal
+![terminal](imgs/terminal.png)
+
+### Git
+![neogit.nvim](imgs/git.png)
+
+### Fuzzy Search(file, rg)
+![telescope.nvim](imgs/telescope.png)
+
+### Plugin Manager(Lazy.nvim)
+![lazy.nvim](imgs/lazy.png)
+
+## Others
 
 OS: Windows10/Ubuntu20.04(WSL2)
 
-字体: FiraCode Nerd Font Mono
+Font: FiraCode Nerd Font Mono
 
-终端: Git Bash on Windows terminal (终端主题: **One Half Dark** theme), Bash
+Terminal: Git Bash on Windows terminal (Theme: **One Half Dark** theme), Bash
 
 ## TODO
 
+- speed up(currently almost 1s to startup, 800~900ms)
 - debug support
 - ssh
-- **my-nvim-manual**
-
