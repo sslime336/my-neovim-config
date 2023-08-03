@@ -3,7 +3,6 @@
 
 return {
     "ray-x/go.nvim",
-    event = { "CmdlineEnter", "VeryLazy" },
     ft = { "go", 'gomod', 'gowork' },
     dependencies = {
         "ray-x/guihua.lua",
