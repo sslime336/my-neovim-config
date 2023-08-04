@@ -11,6 +11,11 @@ local opt2 = {
 }
 
 _Ctrl_s = function()
+    local ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    if ft == 'go' then
+        vim.cmd [[GoImport]]
+        vim.cmd [[GoFmt]]
+    end
     vim.lsp.buf.format { async = true };
     vim.cmd('w');
     vim.cmd('set nu rnu');
