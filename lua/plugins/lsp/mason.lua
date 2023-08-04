@@ -14,9 +14,6 @@ function M.config()
     require("mason-lspconfig").setup {
         ensure_installed = {
             "lua_ls",
-            -- "rust_analyzer",
-            -- "gopls",
-            -- "marksman",
         },
     }
 
@@ -44,6 +41,7 @@ function M.config()
     }
     require("lspconfig").marksman.setup { on_attach = on_attach }
     require("lspconfig").jsonls.setup { on_attach = on_attach }
+    require("lspconfig").taplo.setup { on_attach = on_attach }
 end
 
 return M

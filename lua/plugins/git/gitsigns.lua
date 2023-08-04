@@ -45,6 +45,8 @@ return {
                 enable = false
             },
         }
+        require("scrollbar.handlers.gitsigns").setup()
+
         local opt = {
             silent = true, noremap = true,
         }
