@@ -2,7 +2,7 @@
 
 return {
     'jedrzejboczar/possession.nvim',
-    event = "VeryLazy",
+    lazy = true,
     config = function()
         require('possession').setup({
             session_dir = vim.fn.stdpath('data') .. 'session',

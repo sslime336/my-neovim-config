@@ -3,10 +3,6 @@
 local M = {
     "startup-nvim/startup.nvim",
     lazy = false,
-    dependencies = {
-        "nvim-telescope/telescope.nvim",
-        "nvim-lua/plenary.nvim",
-    },
 }
 
 
@@ -99,12 +95,14 @@ function M.config()
             title = "Basic Commands",
             margin = 5,
             content = {
-                { " Recent Session", "Telescope possession list", "<leader>rs" },
-                { " Find File", "Telescope find_files", "<leader>ff" },
-                { " Find Word", "Telescope live_grep", "<leader>fw" },
+                { " Recent Session", "lua print('Press Ctrl+s to open recent sessions')", "<C-s>" },
+                { " Find File", "lua print('Press Ctrl+f to find files')", "<C-f>" },
+                { " New File", "lua require'startup'.new_file()", "<leader>nf" },
+                -- { " Recent Session", "Telescope possession list", "<leader>rs" },
+                -- { " Find File", "Telescope find_files", "<leader>ff" },
+                -- { " Find Word", "Telescope live_grep", "<leader>fw" },
                 -- { " File Browser", "Telescope file_browser", "<leader>fb" },
                 -- { " Colorschemes", "Telescope colorscheme", "<leader>cs" },
-                { " New File", "lua require'startup'.new_file()", "<leader>nf" },
             },
             highlight = "String",
             default_color = "",

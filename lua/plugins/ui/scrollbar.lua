@@ -2,6 +2,7 @@
 
 local M = {
     'petertriho/nvim-scrollbar',
+    evnet = "VeryLazy",
 }
 
 M.config = function()

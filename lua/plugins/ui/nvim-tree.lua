@@ -2,6 +2,7 @@
 
 local M = {
     'nvim-tree/nvim-tree.lua',
+    keys = { "\\" },
 }
 
 M.config = function()

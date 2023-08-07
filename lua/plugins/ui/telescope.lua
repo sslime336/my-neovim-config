@@ -4,7 +4,7 @@ return {
     {
         'nvim-telescope/telescope.nvim',
         keys = {
-            { "<space>" },
+            "<space>",
         },
         config = function()
             local builtin = require('telescope.builtin')
