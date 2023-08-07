@@ -33,6 +33,6 @@ Terminal: Git Bash on Windows terminal (Theme: **One Half Dark** theme), Bash
 
 ## TODO
 
-- speed up(currently almost 1s to startup, 800~900ms)
+- speed up(currently 200ms or so to startup)
 - debug support
 - ssh
