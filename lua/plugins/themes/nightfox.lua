@@ -2,6 +2,8 @@
 
 local M = {
     "EdenEast/nightfox.nvim",
+    lazy = false,
+    priority = 1000,
 }
 
 function M.config()
@@ -24,4 +26,5 @@ function M.config()
     })
 end
 
-return M
+return {}
+-- return M
