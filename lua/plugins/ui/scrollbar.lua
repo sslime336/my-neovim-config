@@ -2,7 +2,7 @@
 
 local M = {
     'petertriho/nvim-scrollbar',
-    evnet = "VeryLazy",
+    event = { "BufReadPost" },
 }
 
 M.config = function()

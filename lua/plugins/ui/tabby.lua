@@ -1,3 +1,5 @@
+-- 管理 tabs
+
 local M = {
     'nanozuki/tabby.nvim',
 }

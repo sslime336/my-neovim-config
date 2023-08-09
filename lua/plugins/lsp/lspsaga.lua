@@ -2,7 +2,7 @@
 
 return {
     "nvimdev/lspsaga.nvim",
-    event = "VeryLazy",
+    event = "BufReadPost",
     dependencies = { 'nvim-lspconfig' },
     config = function()
         require("lspsaga").setup(

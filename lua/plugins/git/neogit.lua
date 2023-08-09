@@ -2,13 +2,11 @@
 
 local M = {
     "NeogitOrg/neogit",
-    cmd = { "Neogit" },
-    dependencies = "nvim-lua/plenary.nvim",
+    cmd = "Neogit",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    config = true,
 }
-
-M.config = function()
-    local ng = require('neogit')
-    ng.setup {}
-end
 
 return M

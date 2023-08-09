@@ -2,9 +2,9 @@
 
 local M = {
     "folke/tokyonight.nvim",
+    enabled = true,
     lazy = false,
     priority = 1000,
-    opts = {},
 }
 
 M.config = function()
@@ -24,5 +24,4 @@ M.config = function()
     vim.cmd [[colorscheme tokyonight-night]]
 end
 
--- return {}
 return M
