@@ -6,7 +6,6 @@ local M = {
 }
 
 M.config = function()
-    require('onedark').load()
     require('onedark').setup {
         -- Main options --
         style = 'dark',               -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
@@ -46,6 +45,7 @@ M.config = function()
             background = true, -- use background color for virtual text
         },
     }
+    require('onedark').load()
 end
 
 return M
