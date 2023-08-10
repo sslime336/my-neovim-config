@@ -106,9 +106,6 @@ M.config = function()
             vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
         end,
     })
-    -- 官方强烈建议关闭 netrw，所以进行如下设置
-    vim.g.loaded_netrw = 1
-    vim.g.loaded_netrwPlugin = 1
     -- 打开/关闭
     vim.keymap.set('n', '\\', ':NvimTreeFindFileToggle<CR>', { silent = true, noremap = true })
 end
