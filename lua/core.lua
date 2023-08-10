@@ -45,7 +45,3 @@ if cur_os_path_separator == '\\' then    -- On windows
 elseif cur_os_path_separator == '/' then -- On Unix-like OS
     vim.cmd('cd ' .. default_path_linux)
 end
-
--- 关闭 netrw(vim 自带的 File explorer)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
