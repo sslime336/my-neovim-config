@@ -42,6 +42,7 @@ function M.config()
     require("lspconfig").marksman.setup { on_attach = on_attach }
     require("lspconfig").jsonls.setup { on_attach = on_attach }
     require("lspconfig").taplo.setup { on_attach = on_attach }
+    require("lspconfig").nimls.setup { on_attach = on_attach }
 end
 
 return M
