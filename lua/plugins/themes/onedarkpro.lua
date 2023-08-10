@@ -3,7 +3,6 @@ local M = {
     enabled = false,
     lazy = false,
     priority = 1000
-
 }
 
 M.config = function()
