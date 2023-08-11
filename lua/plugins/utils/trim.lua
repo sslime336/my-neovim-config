@@ -7,7 +7,9 @@ local M = {
 
 M.config = function()
     local setting = {
-        ft_blocklist = {},
+        ft_blocklist = {
+            "lua", "go", "rs"
+        },
         patterns = {},
         trim_on_write = true,
         trim_trailing = true,
