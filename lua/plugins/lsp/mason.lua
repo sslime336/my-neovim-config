@@ -37,6 +37,11 @@ function M.config()
         on_attach = on_attach,
         settings = {
             -- INFO: https://github.com/golang/tools/blob/master/gopls/doc/settings.md
+            codelenses       = {
+                generate = false,  -- Don't show the `go generate` lens.
+                gc_details = true, -- Show a code lens toggling the display of gc's choices.
+            },
+            diagnosticsDelay = "250ms",
         },
     }
     require("lspconfig").marksman.setup { on_attach = on_attach }
