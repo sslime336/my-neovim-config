@@ -1,6 +1,8 @@
 local M = {
     "nvim-neotest/neotest",
+    enabled = false,
     dependencies = {
+        "rouge8/neotest-rust",
         "nvim-lua/plenary.nvim",
         "nvim-treesitter/nvim-treesitter",
         "antoinemadec/FixCursorHold.nvim"
@@ -15,5 +17,4 @@ M.config = function()
     })
 end
 
--- return M
-return {}
+return M
