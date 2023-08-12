@@ -8,7 +8,7 @@ local M = {
 M.config = function()
     local setting = {
         ft_blocklist = {
-            "lua", "go", "rs"
+            "lua", "go", "rust"
         },
         patterns = {},
         trim_on_write = true,
