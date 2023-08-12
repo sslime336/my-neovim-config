@@ -19,6 +19,7 @@ M.config = function()
         lsp_cfg = {
             capabilities = capabilities,
         },
+        lsp_keymaps = false,
     }
 end
 
