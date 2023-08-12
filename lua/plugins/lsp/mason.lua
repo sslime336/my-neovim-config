@@ -17,14 +17,9 @@ function M.config()
         },
     }
 
-    local function on_attach(client, bufnr)
-        local opt = { noremap = true, silent = true, buffer = bufnr }
-    end
-
     -- Setup LSP
-    require("lspconfig").lua_ls.setup { on_attach = on_attach }
+    require("lspconfig").lua_ls.setup {}
     require("lspconfig").rust_analyzer.setup {
-        on_attach = on_attach,
         settings = {
             ['rust-analyzer'] = {
                 checkOnSave = {
@@ -34,7 +29,6 @@ function M.config()
         },
     }
     require("lspconfig").gopls.setup {
-        on_attach = on_attach,
         settings = {
             -- INFO: https://github.com/golang/tools/blob/master/gopls/doc/settings.md
             codelenses       = {
@@ -44,10 +38,10 @@ function M.config()
             diagnosticsDelay = "250ms",
         },
     }
-    require("lspconfig").marksman.setup { on_attach = on_attach }
-    require("lspconfig").jsonls.setup { on_attach = on_attach }
-    require("lspconfig").taplo.setup { on_attach = on_attach }
-    require("lspconfig").nimls.setup { on_attach = on_attach }
+    require("lspconfig").marksman.setup {}
+    require("lspconfig").jsonls.setup {}
+    require("lspconfig").taplo.setup {}
+    require("lspconfig").nimls.setup {}
 end
 
 return M
