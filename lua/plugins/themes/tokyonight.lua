@@ -2,7 +2,7 @@
 
 local M = {
     "folke/tokyonight.nvim",
-    enabled = false,
+    enabled = true,
     lazy = false,
     priority = 1000,
 }
