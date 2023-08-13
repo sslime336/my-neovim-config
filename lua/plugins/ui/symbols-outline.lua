@@ -31,7 +31,7 @@ return {
                 Boolean = { icon = "⊨", hl = "@boolean" },
                 Array = { icon = "󰎠", hl = "@constant" },
                 Object = { icon = "⦿", hl = "@type" },
-                Key = { icon = "🔐", hl = "@type" },
+                Key = { icon = "󰌋", hl = "@type" },
                 Null = { icon = "NULL", hl = "@type" },
                 EnumMember = { icon = "", hl = "@field" },
                 Struct = { icon = "𝓢", hl = "@type" },
