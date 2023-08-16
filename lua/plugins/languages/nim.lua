@@ -7,7 +7,7 @@ local M = {
 
 M.config = function()
     require("nim-nvim").setup()
-    vim.cmd [[autocmd FileType Nim setlocal et sta sw=2 sts=2]]
+    vim.cmd [[autocmd FileType nim setlocal et sta sw=2 sts=2]]
 end
 
 return M
