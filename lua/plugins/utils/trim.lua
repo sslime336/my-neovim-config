@@ -11,7 +11,7 @@ M.config = function()
             "markdown", "lua", "go", "rust"
         },
         patterns = {},
-        trim_on_write = true,
+        trim_on_write = false,
         trim_trailing = true,
         trim_last_line = false,
         trim_first_line = false,

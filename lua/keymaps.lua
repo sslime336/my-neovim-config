@@ -17,8 +17,9 @@ _Ctrl_s = function()
     --     vim.cmd [[GoFmt]]
     -- end
     vim.lsp.buf.format { async = true };
-    vim.cmd('w');
-    vim.cmd('set nu rnu');
+    vim.cmd('w')
+    vim.cmd('set nu rnu')
+    vim.cmd('Trim')
 end
 
 -- 格式化、保存当前文件
